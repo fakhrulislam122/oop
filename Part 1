@@ -1,0 +1,21 @@
+class Person {
+  constructor(name, address, sex, blood_group) {
+    (this.name = name),
+      (this.address = address),
+      (this.sex = sex),
+      (this.blood_group = blood_group);
+  }
+  greetings() {
+    console.log(` Hello ${this.name}`);
+  }
+}
+
+class Customer extends Person {
+  constructor(name, sex, id) {
+    super(name, sex);
+    this.id = id;
+  }
+}
+
+let customer1 = new Customer("Md Fakhrul islam", "Jagatshar", 5050);
+console.log(customer1);
